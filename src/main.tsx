@@ -7,7 +7,7 @@ import '@mantine/core/styles.css';
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.createRoot(rootElement as Element).render(
   <React.StrictMode>
     <MantineProvider>
       <App />

@@ -9,7 +9,11 @@ import {
   Space,
 } from '@mantine/core';
 
-function Contact({ targetRef }) {
+type Props = {
+  targetRef: React.RefObject<HTMLDivElement>;
+};
+
+function Contact({ targetRef }: Props) {
   return (
     <Container h="70vh" ref={targetRef}>
       <Stack h="100%" align="center" justify="center" gap="sm">

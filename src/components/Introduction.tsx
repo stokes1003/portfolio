@@ -10,7 +10,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-function Introduction({ scrollIntoView }) {
+type Props = {
+  scrollIntoView: (
+    params?: { alignment?: 'start' | 'end' | 'center' } | undefined
+  ) => void;
+};
+
+function Introduction({ scrollIntoView }: Props) {
   return (
     <>
       <Container h="100vh">

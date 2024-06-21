@@ -4,11 +4,23 @@ import classes from '../header.module.css';
 
 const sections = ['About', 'Projects', 'Contact'];
 
+type Props = {
+  scrollProjectsIntoView: (
+    params?: { alignment?: 'start' | 'end' | 'center' } | undefined
+  ) => void;
+  scrollAboutIntoView: (
+    params?: { alignment?: 'start' | 'end' | 'center' } | undefined
+  ) => void;
+  scrollContactIntoView: (
+    params?: { alignment?: 'start' | 'end' | 'center' } | undefined
+  ) => void;
+};
+
 function Header({
   scrollProjectsIntoView,
   scrollAboutIntoView,
   scrollContactIntoView,
-}) {
+}: Props) {
   const [opened, { toggle }] = useDisclosure(false);
 
   const items = sections.map((section) => (

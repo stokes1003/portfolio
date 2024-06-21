@@ -10,7 +10,11 @@ import {
   Paper,
 } from '@mantine/core';
 
-function About({ targetRef }) {
+type Props = {
+  targetRef: React.RefObject<HTMLDivElement>;
+};
+
+function About({ targetRef }: Props) {
   return (
     <>
       <Container ref={targetRef} mt="xl" pt="60" mb="lg" size="lg" h="80%vh">

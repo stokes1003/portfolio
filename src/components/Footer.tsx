@@ -9,7 +9,7 @@ import {
 import classes from '../FooterSocial.module.css';
 
 function Footer() {
-  const [scroll, scrollTo] = useWindowScroll();
+  const [, scrollTo] = useWindowScroll();
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
