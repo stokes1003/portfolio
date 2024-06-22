@@ -20,264 +20,273 @@ function About({ targetRef }: Props) {
 
   if (isMobile) {
     return (
-      <Container ref={targetRef} mb="lg" size="lg" h="80%vh">
-        <Stack align="center" justify="center">
-          <Title c="#005C78" size="40" fw="700">
-            About
-          </Title>
-        </Stack>
-        <Group m="lg" justify="center">
-          <Image h="300" w="300" src="/images/AI Headshot.png" />
-          <Space h="xl" />
-          <Text c="#005C78" size="md">
-            Driven by a commitment to lifelong learning, I thrive as a developer
-            with a strong passion for JavaScript, React, and web development.
-            The blend of creativity, logic, and technology, along with the
-            constant potential for new discoveries, fuels my excitement and
-            dedication. Away from the screen, I enjoy woodworking, staying fit,
-            and playing the guitar.
-          </Text>
-        </Group>
-        <Group mt="ls" justify="center">
-          <Stack h="50%vh">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.javascript.com/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/javascript-icon.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  JavaScript
-                </Text>
-              </Stack>
-            </Paper>
+      <>
+        <Container
+          ref={targetRef}
+          mb="lg"
+          mt="200"
+          pt="500"
+          size="lg"
+          h="80%vh"
+        >
+          <Stack align="center" justify="center">
+            <Title c="#005C78" size="40" fw="700">
+              About
+            </Title>
+          </Stack>
+          <Group m="lg" justify="center">
+            <Image h="300" w="300" src="/images/AI Headshot.png" />
+            <Space h="xl" />
+            <Text c="#005C78" size="md">
+              Driven by a commitment to lifelong learning, I thrive as a
+              developer with a strong passion for JavaScript, React, and web
+              development. The blend of creativity, logic, and technology, along
+              with the constant potential for new discoveries, fuels my
+              excitement and dedication. Away from the screen, I enjoy
+              woodworking, staying fit, and playing the guitar.
+            </Text>
+          </Group>
+          <Group mt="ls" justify="center">
+            <Stack h="50%vh">
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://www.javascript.com/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/javascript-icon.webp"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    JavaScript
+                  </Text>
+                </Stack>
+              </Paper>
 
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://expo.dev/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Expo-Logo.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  EXPO
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.mongodb.com/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/MongoDB-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  MongoDB
-                </Text>
-              </Stack>
-            </Paper>
-          </Stack>
-          <Stack h="100%vh">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://html.com/html5/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/HTML5-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  HTML5
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.typescriptlang.org/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/TypeScript-Icon.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  TypeScript
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://mantine.dev/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Mantine-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  Mantine
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://react.dev/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/React-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  REACT
-                </Text>
-              </Stack>
-            </Paper>
-          </Stack>
-          <Stack h="100%vh">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.w3.org/Style/CSS/Overview.en.html"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/CSS3-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  CSS
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://github.com/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Git-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  GitHub
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              component="a"
-              href="https://nodejs.org/en"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/nodeJS-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  NODE.JS
-                </Text>
-              </Stack>
-            </Paper>
-          </Stack>
-        </Group>
-      </Container>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://expo.dev/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/Expo-Logo.webp"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    EXPO
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://www.mongodb.com/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/MongoDB-Icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    MongoDB
+                  </Text>
+                </Stack>
+              </Paper>
+            </Stack>
+            <Stack h="100%vh">
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://html.com/html5/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/HTML5-Icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    HTML5
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://www.typescriptlang.org/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/TypeScript-Icon.webp"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    TypeScript
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://mantine.dev/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/Mantine-Icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    Mantine
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://react.dev/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/React-icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    REACT
+                  </Text>
+                </Stack>
+              </Paper>
+            </Stack>
+            <Stack h="100%vh">
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://www.w3.org/Style/CSS/Overview.en.html"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/CSS3-icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    CSS
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                component="a"
+                href="https://github.com/"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/Git-Icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    GitHub
+                  </Text>
+                </Stack>
+              </Paper>
+              <Paper
+                h="110"
+                w="100"
+                shadow="lg"
+                radius="xl"
+                withBorder
+                p="xl"
+                component="a"
+                href="https://nodejs.org/en"
+                target="_blank"
+                rel="noopener"
+              >
+                <Stack justify="center" align="center" gap="xs">
+                  <Image
+                    w="18"
+                    h="5"
+                    src="/images/ProgrammingIcons/nodeJS-icon.png"
+                  />
+                  <Text c="#005C78" size="xs" fw={500}>
+                    NODE.JS
+                  </Text>
+                </Stack>
+              </Paper>
+            </Stack>
+          </Group>
+        </Container>
+      </>
     );
   } else
     return (
