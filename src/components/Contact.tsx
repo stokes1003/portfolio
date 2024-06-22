@@ -45,58 +45,60 @@ function Contact({ targetRef }: Props) {
 
   if (isMobile) {
     return (
-      <Container mt="150" size="sm" ref={targetRef} mb="sm">
-        <Stack h="100%" align="center" justify="center" gap="sm">
-          <Stack align="center" justify="center" gap="sm">
-            <Title c="#005C78" fw="700" size="40">
-              Contact
-            </Title>
+      <>
+        <Container mt="150" size="sm" ref={targetRef} mb="sm">
+          <Stack h="100%" align="center" justify="center" gap="sm">
+            <Stack align="center" justify="center" gap="sm">
+              <Title c="#005C78" fw="700" size="40">
+                Contact
+              </Title>
+            </Stack>
+            <Container size="xs">
+              <Text c="#006989" size="md">
+                Have a question or want to work together? Leave your details and
+                I'll get back to you as soon as possible.
+              </Text>
+              <form ref={form} onSubmit={sendEmail} className={styles['form']}>
+                <label className={styles['label']}>Name</label>
+                <input
+                  type="text"
+                  name="user_name"
+                  className={styles['feedback-input']}
+                  placeholder="Your name"
+                  required
+                />
+                <label className={styles['label']}>Email</label>
+                <input
+                  type="email"
+                  name="user_email"
+                  className={styles['feedback-input']}
+                  placeholder="Email"
+                  required
+                />
+                <label className={styles['label']}>Message</label>
+                <textarea
+                  name="message"
+                  className={styles['feedback-input']}
+                  placeholder="Message"
+                  required
+                />
+                <input
+                  type="submit"
+                  value="Submit"
+                  className={styles['submit-button']}
+                />
+                {isSent && (
+                  <Group mt="md" align="center" justify="center">
+                    <Text fw={500} c="#E88D67">
+                      Message Sent Successfully
+                    </Text>
+                  </Group>
+                )}
+              </form>
+            </Container>
           </Stack>
-          <Container size="xs">
-            <Text c="#006989" size="md">
-              Have a question or want to work together? Leave your details and
-              I'll get back to you as soon as possible.
-            </Text>
-            <form ref={form} onSubmit={sendEmail} className={styles['form']}>
-              <label className={styles['label']}>Name</label>
-              <input
-                type="text"
-                name="user_name"
-                className={styles['feedback-input']}
-                placeholder="Your name"
-                required
-              />
-              <label className={styles['label']}>Email</label>
-              <input
-                type="email"
-                name="user_email"
-                className={styles['feedback-input']}
-                placeholder="Email"
-                required
-              />
-              <label className={styles['label']}>Message</label>
-              <textarea
-                name="message"
-                className={styles['feedback-input']}
-                placeholder="Message"
-                required
-              />
-              <input
-                type="submit"
-                value="Submit"
-                className={styles['submit-button']}
-              />
-              {isSent && (
-                <Group mt="md" align="center" justify="center">
-                  <Text fw={500} c="#E88D67">
-                    Message Sent Successfully
-                  </Text>
-                </Group>
-              )}
-            </form>
-          </Container>
-        </Stack>
-      </Container>
+        </Container>
+      </>
     );
   }
   return (
