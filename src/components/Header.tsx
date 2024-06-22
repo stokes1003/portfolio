@@ -1,5 +1,5 @@
-import { Container, Group, Burger, Button } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { Container, Group, Button } from '@mantine/core';
+
 import classes from '../header.module.css';
 import { useMediaQuery } from '@mantine/hooks';
 

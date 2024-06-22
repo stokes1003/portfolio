@@ -7,7 +7,6 @@ import {
   Title,
   Stack,
   Space,
-  Paper,
 } from '@mantine/core';
 
 import { useMediaQuery } from '@mantine/hooks';
@@ -18,8 +17,6 @@ type Props = {
 
 function Contact({ targetRef }: Props) {
   const isMobile = useMediaQuery('(max-width: 1050px)');
-
-  const contactSubmit = (e) => {};
 
   if (isMobile) {
     return (
@@ -89,9 +86,7 @@ function Contact({ targetRef }: Props) {
             />
             <Space h="sm" />
 
-            <Button onSubmit={contactSubmit} color="#006989">
-              Submit
-            </Button>
+            <Button color="#006989">Submit</Button>
           </Stack>
         </Container>
       </Stack>
