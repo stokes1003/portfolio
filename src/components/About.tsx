@@ -40,7 +40,18 @@ function About({ targetRef }: Props) {
         </Group>
         <Group mt="ls" justify="center">
           <Stack h="50%vh">
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://www.javascript.com/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -53,7 +64,18 @@ function About({ targetRef }: Props) {
               </Stack>
             </Paper>
 
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://expo.dev/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -65,7 +87,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://www.mongodb.com/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -79,7 +112,18 @@ function About({ targetRef }: Props) {
             </Paper>
           </Stack>
           <Stack h="100%vh">
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://html.com/html5/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -91,7 +135,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://www.typescriptlang.org/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -103,7 +158,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://mantine.dev/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -115,7 +181,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://react.dev/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -129,7 +206,18 @@ function About({ targetRef }: Props) {
             </Paper>
           </Stack>
           <Stack h="100%vh">
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://www.w3.org/Style/CSS/Overview.en.html"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -141,7 +229,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              component="a"
+              href="https://github.com/"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -153,7 +252,18 @@ function About({ targetRef }: Props) {
                 </Text>
               </Stack>
             </Paper>
-            <Paper h="110" w="100" shadow="lg" radius="xl" withBorder p="xl">
+            <Paper
+              h="110"
+              w="100"
+              shadow="lg"
+              radius="xl"
+              withBorder
+              p="xl"
+              component="a"
+              href="https://nodejs.org/en"
+              target="_blank"
+              rel="noopener"
+            >
               <Stack justify="center" align="center" gap="xs">
                 <Image
                   w="18"
@@ -196,7 +306,16 @@ function About({ targetRef }: Props) {
             <Grid.Col span={6} h="80%vh">
               <Group justify="center">
                 <Stack h="100%vh">
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://www.javascript.com/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -209,7 +328,16 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
 
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://expo.dev/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -221,7 +349,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://www.mongodb.com/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -235,7 +372,16 @@ function About({ targetRef }: Props) {
                   </Paper>
                 </Stack>
                 <Stack h="100%vh">
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://html.com/html5/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -247,7 +393,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://www.typescriptlang.org/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -259,7 +414,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://mantine.dev/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -271,7 +435,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://react.dev/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -285,7 +458,16 @@ function About({ targetRef }: Props) {
                   </Paper>
                 </Stack>
                 <Stack h="100%vh">
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://www.w3.org/Style/CSS/Overview.en.html"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -297,7 +479,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://github.com/"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"
@@ -309,7 +500,16 @@ function About({ targetRef }: Props) {
                       </Text>
                     </Stack>
                   </Paper>
-                  <Paper shadow="lg" radius="xl" withBorder p="xl">
+                  <Paper
+                    component="a"
+                    href="https://nodejs.org/en"
+                    shadow="lg"
+                    radius="xl"
+                    withBorder
+                    p="xl"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <Stack justify="center" align="center" gap="xs">
                       <Image
                         w="50"

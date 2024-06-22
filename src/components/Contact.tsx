@@ -7,6 +7,7 @@ import {
   Title,
   Stack,
   Space,
+  Paper,
 } from '@mantine/core';
 
 import { useMediaQuery } from '@mantine/hooks';
@@ -76,6 +77,7 @@ function Contact({ targetRef }: Props) {
             I'll get back to you as soon as possible.
           </Text>
           <Space h="md" />
+
           <Stack align="stretch" justify="flex-end" gap="xs">
             <TextInput c="#005C78" label="Your name" placeholder="Your name" />
             <TextInput c="#005C78" label="Email" placeholder="Email" mt="md" />

@@ -77,7 +77,7 @@ function Footer() {
             rel="noopener"
           >
             <IconBrandLinkedin
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(25), height: rem(25) }}
               stroke={1.5}
               color="#005C78"
             />
@@ -92,7 +92,7 @@ function Footer() {
             rel="noopener"
           >
             <IconBrandGithub
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(25), height: rem(25) }}
               stroke={1.5}
               color="#005C78"
             />

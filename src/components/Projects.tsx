@@ -177,7 +177,14 @@ function Projects({ targetRef }: { targetRef: any }) {
               </Group>
             </Grid.Col>
             <Grid.Col mt="xl" mb="xl" span={8}>
-              <Paper shadow="xl" withBorder>
+              <Paper
+                shadow="xl"
+                withBorder
+                component="a"
+                href="https://stoopz.golf"
+                target="_blank"
+                rel="noopener"
+              >
                 <Paper p="20px" bg="#006989">
                   <Image radius="sm" src="/images/Stoopz.golf.png" p="20px" />
                 </Paper>
