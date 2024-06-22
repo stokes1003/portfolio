@@ -13,30 +13,33 @@ function Contact({ targetRef }: Props) {
   const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceID = import.meta.env.VITE_SERVICE_ID as string;
-    const templateID = import.meta.env.VITE_TEMPLATE_ID as string;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY as string;
+    console.log('sendEmail function called'); // Log to ensure function is called
+
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+    console.log('Environment variables:', { serviceID, templateID, publicKey }); // Log environment variables
 
     if (form.current) {
-      emailjs
-        .sendForm(serviceID, templateID, form.current, {
-          publicKey: publicKey,
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-            if (form.current) {
-              form.current.reset();
-            }
-            setIsSent(true);
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          }
+      try {
+        const result = await emailjs.sendForm(
+          serviceID,
+          templateID,
+          form.current,
+          publicKey
         );
+        console.log('SUCCESS!', result.text);
+        form.current.reset();
+        setIsSent(true);
+      } catch (error) {
+        console.error('FAILED...', error);
+      }
+    } else {
+      console.log('form.current is null');
     }
   };
 
