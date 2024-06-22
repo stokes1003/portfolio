@@ -40,7 +40,7 @@ function Contact({ targetRef }: Props) {
 
   if (isMobile) {
     return (
-      <Container mt="xl" size="sm" ref={targetRef} mb="sm">
+      <Container mt="150" size="sm" ref={targetRef} mb="sm">
         <Stack h="100%" align="center" justify="center" gap="sm">
           <Stack align="center" justify="center" gap="sm">
             <Title c="#005C78" fw="700" size="40">

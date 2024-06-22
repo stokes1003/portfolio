@@ -18,7 +18,7 @@ function Projects({ targetRef }: { targetRef: any }) {
   const isMobile = useMediaQuery('(max-width: 1050px)');
   if (isMobile) {
     return (
-      <Container mt="xl" size="md" h="100%vh">
+      <Container mt="150" size="md" h="100%vh">
         <Group justify="center">
           <Title c="#005C78" fw="700" size="40">
             Projects
