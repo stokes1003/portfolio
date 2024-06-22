@@ -26,8 +26,8 @@ function Contact({ targetRef }: Props) {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm('service_i6hvb6k', 'template_cgowenh', form.current, {
+        publicKey: 'EqX3l6ts-dgfG1BHW',
       })
       .then(
         () => {
