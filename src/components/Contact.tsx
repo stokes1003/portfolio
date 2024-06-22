@@ -19,9 +19,9 @@ function Contact({ targetRef }: Props) {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceID: string = import.meta.env.VITE_SERVICE_ID as string;
-    const templateID: string = import.meta.env.VITE_TEMPLATE_ID as string;
-    const publicKey: string = import.meta.env.VITE_PUBLIC_KEY as string;
+    const serviceID: string = process.env.VITE_SERVICE_ID as string;
+    const templateID: string = process.env.VITE_TEMPLATE_ID as string;
+    const publicKey: string = process.env.VITE_PUBLIC_KEY as string;
 
     if (form.current) {
       emailjs
