@@ -1,6 +1,6 @@
 import { Text, Container, Title, Stack, Group } from '@mantine/core';
 
-import { useState, useRef, FormEvent } from 'react';
+import { useState, useRef } from 'react';
 
 import { useMediaQuery } from '@mantine/hooks';
 
