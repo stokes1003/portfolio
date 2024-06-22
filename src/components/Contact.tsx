@@ -1,8 +1,8 @@
 import { Text, Container, Title, Stack, Group } from '@mantine/core';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import { useMediaQuery } from '@mantine/hooks';
-import React, { useRef } from 'react';
+
 import emailjs from '@emailjs/browser';
 import styles from '../Contact.module.css';
 
@@ -12,10 +12,10 @@ type Props = {
 
 function Contact({ targetRef }: Props) {
   const isMobile = useMediaQuery('(max-width: 1050px)');
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceID = import.meta.env.VITE_SERVICE_ID;
@@ -23,13 +23,13 @@ function Contact({ targetRef }: Props) {
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
     emailjs
-      .sendForm(serviceID, templateID, form.current, {
+      .sendForm(serviceID, templateID, form.current!, {
         publicKey: publicKey,
       })
       .then(
         () => {
           console.log('SUCCESS!');
-          form.current.reset();
+          form.current!.reset();
           setIsSent(true);
         },
         (error) => {
