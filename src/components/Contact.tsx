@@ -69,7 +69,6 @@ function Contact({ targetRef }: Props) {
                 name="user_email"
                 className={styles['feedback-input']}
                 placeholder="Email"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 required
               />
               <label className={styles['label']}>Message</label>
@@ -126,7 +125,6 @@ function Contact({ targetRef }: Props) {
                 name="user_email"
                 className={styles['feedback-input']}
                 placeholder="Email"
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 required
               />
               <label className={styles['label']}>Message</label>
