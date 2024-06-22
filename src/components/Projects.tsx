@@ -13,8 +13,9 @@ import {
   Flex,
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { RefObject } from 'react';
 
-function Projects({ targetRef }: { targetRef: any }) {
+function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
   const isMobile = useMediaQuery('(max-width: 1050px)');
   if (isMobile) {
     return (

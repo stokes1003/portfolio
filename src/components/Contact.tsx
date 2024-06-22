@@ -31,13 +31,13 @@ function Contact({ targetRef }: Props) {
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
     emailjs
-      .sendForm(serviceID, templateID, form.current!, {
+      .sendForm(serviceID, templateID, form.current, {
         publicKey: publicKey,
       })
       .then(
         () => {
           console.log('SUCCESS!');
-          form.current!.reset();
+          form.current.reset();
           setIsSent(true);
         },
         (error) => {
