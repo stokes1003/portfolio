@@ -1,6 +1,7 @@
 import { Container, Group, Burger, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from '../header.module.css';
+import { useMediaQuery } from '@mantine/hooks';
 
 const sections = ['About', 'Projects', 'Contact'];
 
@@ -21,8 +22,6 @@ function Header({
   scrollAboutIntoView,
   scrollContactIntoView,
 }: Props) {
-  const [opened, { toggle }] = useDisclosure(false);
-
   const items = sections.map((section) => (
     <Button
       key={section}
@@ -38,23 +37,39 @@ function Header({
       {section}
     </Button>
   ));
-
-  return (
-    <header
-      className={classes.header}
-      style={{
-        position: 'sticky',
-        top: 0,
-      }}
-    >
-      <Container size="md" className={classes.inner}>
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
-
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
-    </header>
-  );
+  const isMobile = useMediaQuery('(max-width: 430px)');
+  if (isMobile) {
+    return (
+      <div></div>
+      // <header
+      //   className={classes.header}
+      //   style={{
+      //     position: 'sticky',
+      //     top: 0,
+      //   }}
+      // >
+      //   <Container size="md" className={classes.innerMobile}>
+      //     <Group gap="xs" visibleFrom="xs">
+      //       {items}
+      //     </Group>
+      //   </Container>
+      // </header>
+    );
+  } else
+    return (
+      <header
+        className={classes.header}
+        style={{
+          position: 'sticky',
+          top: 0,
+        }}
+      >
+        <Container size="md" className={classes.inner}>
+          <Group gap={5} visibleFrom="xs">
+            {items}
+          </Group>
+        </Container>
+      </header>
+    );
 }
 export default Header;

@@ -12,6 +12,12 @@
   justify-content: flex-end;
   align-items: center;
 }
+.innerMobile {
+  height: rem(56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .link {
   display: block;
