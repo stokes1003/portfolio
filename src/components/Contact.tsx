@@ -19,24 +19,26 @@ function Contact({ targetRef }: Props) {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceID = import.meta.env.VITE_SERVICE_ID;
-    const templateID = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    const serviceID: string = import.meta.env.VITE_SERVICE_ID as string;
+    const templateID: string = import.meta.env.VITE_TEMPLATE_ID as string;
+    const publicKey: string = import.meta.env.VITE_PUBLIC_KEY as string;
 
-    emailjs
-      .sendForm(serviceID, templateID, form.current!, {
-        publicKey: publicKey,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          form.current!.reset();
-          setIsSent(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(serviceID, templateID, form.current, {
+          publicKey: publicKey,
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            form.current!.reset();
+            setIsSent(true);
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          }
+        );
+    }
   };
 
   if (isMobile) {
