@@ -25,13 +25,18 @@ function Contact({ targetRef }: Props) {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
     emailjs
-      .sendForm('service_i6hvb6k', 'template_cgowenh', form.current, {
-        publicKey: 'EqX3l6ts-dgfG1BHW',
+      .sendForm(serviceID, templateID, form.current, {
+        publicKey: publicKey,
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          form.current.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
