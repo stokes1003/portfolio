@@ -1,5 +1,9 @@
 import { Text, Container, Title, Stack, Group } from '@mantine/core';
+<<<<<<< HEAD
 import { useState, useRef } from 'react';
+=======
+import { useState, FormEvent } from 'react';
+>>>>>>> 040e98f (formEvent import)
 
 import { useMediaQuery } from '@mantine/hooks';
 
@@ -15,7 +19,11 @@ function Contact({ targetRef }: Props) {
   const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
 
+<<<<<<< HEAD
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+=======
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+>>>>>>> 040e98f (formEvent import)
     e.preventDefault();
 
     const serviceID = import.meta.env.VITE_SERVICE_ID;
