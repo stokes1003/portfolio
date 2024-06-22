@@ -9,13 +9,18 @@ import {
   Space,
 } from '@mantine/core';
 
+import { useRef } from 'react';
+import { useMediaQuery } from '@mantine/hooks';
+
 type Props = {
   targetRef: React.RefObject<HTMLDivElement>;
 };
-import { useMediaQuery } from '@mantine/hooks';
 
 function Contact({ targetRef }: Props) {
   const isMobile = useMediaQuery('(max-width: 430px)');
+  const form = useRef();
+
+  const contactSubmit = (e) => {};
 
   if (isMobile) {
     return (
@@ -60,7 +65,7 @@ function Contact({ targetRef }: Props) {
     );
   }
   return (
-    <Container h="70vh" ref={targetRef}>
+    <Container h="70vh" mt="lg" pt="lg" ref={targetRef}>
       <Stack h="100%" align="center" justify="center" gap="sm">
         <Stack h={100} align="center" justify="center" gap="sm">
           <Title c="#005C78" fw="700" size="40">
@@ -84,7 +89,9 @@ function Contact({ targetRef }: Props) {
             />
             <Space h="sm" />
 
-            <Button color="#006989">Submit</Button>
+            <Button onSubmit={contactSubmit} color="#006989">
+              Submit
+            </Button>
           </Stack>
         </Container>
       </Stack>
