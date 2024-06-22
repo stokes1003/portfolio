@@ -15,7 +15,7 @@ import {
 import { useMediaQuery } from '@mantine/hooks';
 
 function Projects({ targetRef }: { targetRef: any }) {
-  const isMobile = useMediaQuery('(max-width: 430px)');
+  const isMobile = useMediaQuery('(max-width: 1050px)');
   if (isMobile) {
     return (
       <Container mt="xl" size="md" h="100%vh">

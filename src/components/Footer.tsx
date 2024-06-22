@@ -11,7 +11,7 @@ import classes from '../FooterSocial.module.css';
 
 function Footer() {
   const [, scrollTo] = useWindowScroll();
-  const isMobile = useMediaQuery('(max-width: 430px)');
+  const isMobile = useMediaQuery('(max-width: 500px)');
 
   if (isMobile) {
     return (

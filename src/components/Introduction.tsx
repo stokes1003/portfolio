@@ -18,7 +18,7 @@ type Props = {
 };
 
 function Introduction({ scrollIntoView }: Props) {
-  const isMobile = useMediaQuery('(max-width: 430px)');
+  const isMobile = useMediaQuery('(max-width: 500px)');
 
   if (isMobile) {
     return (

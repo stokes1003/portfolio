@@ -9,7 +9,6 @@ import {
   Space,
 } from '@mantine/core';
 
-import { useRef } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
 
 type Props = {
@@ -17,8 +16,7 @@ type Props = {
 };
 
 function Contact({ targetRef }: Props) {
-  const isMobile = useMediaQuery('(max-width: 430px)');
-  const form = useRef();
+  const isMobile = useMediaQuery('(max-width: 1050px)');
 
   const contactSubmit = (e) => {};
 

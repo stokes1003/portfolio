@@ -37,7 +37,7 @@ function Header({
       {section}
     </Button>
   ));
-  const isMobile = useMediaQuery('(max-width: 430px)');
+  const isMobile = useMediaQuery('(max-width: 590px)');
   if (isMobile) {
     return (
       <div></div>
