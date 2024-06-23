@@ -16,13 +16,9 @@ function Contact({ targetRef }: Props) {
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log('sendEmail function called'); // Log to ensure function is called
-
     const serviceID = import.meta.env.VITE_SERVICE_ID;
     const templateID = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-
-    console.log('Environment variables:', { serviceID, templateID, publicKey }); // Log environment variables
 
     if (form.current) {
       try {
