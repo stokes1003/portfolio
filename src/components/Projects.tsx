@@ -39,8 +39,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             to handle authorization and data for the leaderboard table.
           </Text>
 
-          <Paper p="20px" mb="sm" bg="#005C78">
-            <Image radius="sm" src="/images/Stoopz.golf.png" p="20px" />
+          <Paper p="10px" mb="sm" bg="#005C78">
+            <Image radius="md" src="/images/Stoopz.golf.png" p="5px" />
           </Paper>
         </Flex>
         <Group grow justify="flex-start" align="flex-start">
@@ -73,19 +73,49 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
 
         <Flex mt="xl" gap="xs" align="center" direction="column">
           <Title c="#E88D67" order={2}>
-            Media App
+            Restaurant Search App
           </Title>
           <Title c="#005C78" order={4}>
-            iOS App for Media
+            For iOS and Android
           </Title>
 
           <Text c="#006989" size="md">
-            This app has something to do with media. I'm pretty sure it was
-            built in Expo with React Native but I can't remember and I can't
-            open it right now.
+            This app was built using React Native with Expo. It utilizes the
+            Yelp API to enable users to easily find restaurants and their
+            ratings across different price ranges.
           </Text>
-          <Paper p="20px" mb="sm" bg="#E88D67">
-            <Image radius="sm" src="/images/Stoopz.golf.png" p="20px" />
+
+          <Paper
+            p="10px"
+            mb="sm"
+            bg="#E88D67"
+            component="a"
+            href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
+            target="_blank"
+            rel="noopener"
+            shadow="xl"
+            withBorder
+          >
+            <Group align="center" justify="center" gap="xl">
+              <Image
+                radius="lg"
+                h="175"
+                w="75"
+                src="/images/FoodApp/FoodApp3.png"
+              />
+              <Image
+                radius="lg"
+                h="175"
+                w="75"
+                src="/images/FoodApp/FoodApp1.png"
+              />
+              <Image
+                radius="lg"
+                h="175"
+                w="75"
+                src="/images/FoodApp/FoodApp2.png"
+              />
+            </Group>
           </Paper>
         </Flex>
         <Group grow justify="flex-start" align="flex-start">
@@ -93,20 +123,53 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             <Stack gap="xs">
               <Button
                 color="#006989"
+                variant="filled"
                 component="a"
-                href="https://stoopz.golf"
-                variant="outline"
+                href="https://github.com/stokes1003/food"
                 target="_blank"
                 rel="noopener"
               >
-                Live App
+                Learn More
               </Button>
+            </Stack>
+          </Box>
+        </Group>
 
+        <Flex mt="xl" gap="xs" align="center" direction="column">
+          <Title c="#E88D67" order={2}>
+            Map Searcher
+          </Title>
+          <Title c="#005C78" order={4}>
+            Detailed Location Search Engine
+          </Title>
+          <Text c="#006989" size="md">
+            This project was built using React and TypeScript, incorporating the
+            Google Maps API. The app enables users to search for detailed maps
+            of any location around the world.
+          </Text>
+
+          <Paper
+            p="10px"
+            mb="sm"
+            bg="#005C78"
+            component="a"
+            href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
+            target="_blank"
+            rel="noopener"
+            shadow="xl"
+            withBorder
+          >
+            <Image radius="md" src="/images/LocationSearch.png" p="5px" />
+          </Paper>
+        </Flex>
+        <Group grow justify="flex-start" align="flex-start">
+          <Box size="13rem">
+            <Stack gap="xs">
               <Button
                 color="#006989"
                 variant="filled"
                 component="a"
-                href="https://github.com/Stoopz-Golf-Association/golf-app"
+                href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
                 target="_blank"
                 rel="noopener"
               >
@@ -266,7 +329,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                   Detailed Location Search Engine
                 </Title>
                 <Text c="#006989">
-                  This project is built using React and TypeScript,
+                  This project was built using React and TypeScript,
                   incorporating the Google Maps API. The app enables users to
                   search for detailed maps of any location around the world.
                 </Text>
