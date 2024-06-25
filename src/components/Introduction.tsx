@@ -18,7 +18,7 @@ type Props = {
 };
 
 function Introduction({ scrollIntoView }: Props) {
-  const isMobile = useMediaQuery('(max-width: 500px)');
+  const isMobile = useMediaQuery('(max-width: 630px)');
 
   if (isMobile) {
     return (
@@ -35,15 +35,18 @@ function Introduction({ scrollIntoView }: Props) {
               </Title>
             </Flex>
             <Title c="#005C78" size="40" style={{ textAlign: 'center' }}>
-              I'm a software engineer.
+              I'm a software{' '}
+            </Title>{' '}
+            <Title c="#005C78" size="40" style={{ textAlign: 'center' }}>
+              engineer.
             </Title>
-
+            <Space h="sm" />
             <Button
               variant="outline"
               color="#006989"
               onClick={() =>
                 scrollIntoView({
-                  alignment: 'center',
+                  alignment: 'start',
                 })
               }
             >
@@ -78,7 +81,7 @@ function Introduction({ scrollIntoView }: Props) {
             color="#006989"
             onClick={() =>
               scrollIntoView({
-                alignment: 'center',
+                alignment: 'start',
               })
             }
           >

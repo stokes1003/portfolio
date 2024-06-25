@@ -11,7 +11,7 @@ import classes from '../FooterSocial.module.css';
 
 function Footer() {
   const [, scrollTo] = useWindowScroll();
-  const isMobile = useMediaQuery('(max-width: 500px)');
+  const isMobile = useMediaQuery('(max-width: 576px)');
 
   if (isMobile) {
     return (
@@ -19,7 +19,7 @@ function Footer() {
         <Container className={classes.inner}>
           <Group gap={10} className={classes.links} wrap="nowrap">
             <ActionIcon
-              size="lg"
+              size="42"
               color="gray"
               variant="subtle"
               component="a"
@@ -28,13 +28,13 @@ function Footer() {
               rel="noopener"
             >
               <IconBrandLinkedin
-                style={{ width: rem(25), height: rem(25) }}
+                style={{ width: '42', height: '42' }}
                 stroke={1.5}
                 color="#005C78"
               />
             </ActionIcon>
             <ActionIcon
-              size="lg"
+              size="36"
               color="gray"
               variant="subtle"
               component="a"
@@ -43,14 +43,18 @@ function Footer() {
               rel="noopener"
             >
               <IconBrandGithub
-                style={{ width: rem(25), height: rem(25) }}
+                style={{ width: '36', height: '36' }}
                 stroke={1.5}
                 color="#005C78"
               />
             </ActionIcon>
           </Group>
-          <Group mt="-100">
-            <Button color="#005C78" onClick={() => scrollTo({ y: 0 })}>
+          <Group pos="absolute">
+            <Button
+              color="#005C78"
+              onClick={() => scrollTo({ y: 0 })}
+              bottom="48px"
+            >
               <IconChevronsUp />
             </Button>
           </Group>
@@ -64,8 +68,9 @@ function Footer() {
         <Group
           gap={0}
           className={classes.links}
-          justify="flex-end"
+          justify="flex-start"
           wrap="nowrap"
+          w="150px"
         >
           <ActionIcon
             size="lg"
@@ -103,7 +108,7 @@ function Footer() {
             <IconChevronsUp />
           </Button>
         </Group>
-        <Group>
+        <Group w="150px" justify="flex-end">
           <Text size="xs" c="#005C78">
             SAM STOKES @2024
           </Text>

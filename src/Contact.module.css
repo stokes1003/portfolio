@@ -3,7 +3,7 @@
 form {
   max-width: 500px;
   margin: 50px auto;
-  max-height: 200px;
+  height: 100%;
 }
 
 .feedback-input {

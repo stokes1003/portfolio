@@ -27,9 +27,11 @@ function Header({
       key={section}
       className={classes.link}
       onClick={() => {
-        if (section === 'About') scrollAboutIntoView();
-        if (section === 'Projects') scrollProjectsIntoView();
-        if (section === 'Contact') scrollContactIntoView();
+        if (section === 'About') scrollAboutIntoView({ alignment: 'start' });
+        if (section === 'Projects')
+          scrollProjectsIntoView({ alignment: 'start' });
+        if (section === 'Contact')
+          scrollContactIntoView({ alignment: 'start' });
       }}
       color="#006989"
       variant="outline"
@@ -37,7 +39,7 @@ function Header({
       {section}
     </Button>
   ));
-  const isMobile = useMediaQuery('(max-width: 590px)');
+  const isMobile = useMediaQuery('(max-width: 1225px)');
   if (isMobile) {
     return (
       <div></div>
