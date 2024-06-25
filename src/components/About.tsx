@@ -38,12 +38,12 @@ function About({ targetRef }: Props) {
             <Image h="300" w="300" src="/images/AI Headshot.png" />
             <Space h="xl" />
             <Text c="#005C78" size="md">
-              Driven by a commitment to lifelong learning, I thrive as a
-              developer with a strong passion for JavaScript, React, and web
-              development. The blend of creativity, logic, and technology, along
-              with the constant potential for new discoveries, fuels my
-              excitement and dedication. Away from the screen, I enjoy
-              woodworking, staying fit, and playing the guitar.
+              I have a passion for building. I love the planning, the problem
+              solving, and the learning that comes with taking a project from
+              idea to end product. As a software developer, I have utilized
+              React, JavaScript and TypeScript as the basic building blocks to
+              create. But the beauty of development is that the learning never
+              stops and new tools are constantly being added to the toolbox.
             </Text>
           </Group>
           <Group mt="ls" justify="center">
@@ -300,15 +300,16 @@ function About({ targetRef }: Props) {
           <Grid gutter="xl" h="80%vh" mt="lg">
             <Grid.Col h="80vh" span={6}>
               <Group justify="center">
-                <Image h="450" w="450" src="/images/AI Headshot.png" />
+                <Image h="425" w="425" src="/images/AI Headshot.png" />
                 <Space h="lg" />
                 <Text c="#005C78">
-                  Driven by a commitment to lifelong learning, I thrive as a
-                  developer with a strong passion for JavaScript, React, and web
-                  development. The blend of creativity, logic, and technology,
-                  along with the constant potential for new discoveries, fuels
-                  my excitement and dedication. Away from the screen, I enjoy
-                  woodworking, staying fit, and playing the guitar.
+                  I have a passion for building. I love the planning, the
+                  problem solving, and the learning that comes with taking a
+                  project from idea to end product. As a software developer, I
+                  have utilized React, JavaScript and TypeScript as the basic
+                  building blocks to create. But the beauty of development is
+                  that the learning never stops and new tools are constantly
+                  being added.
                 </Text>
               </Group>
             </Grid.Col>
@@ -317,6 +318,8 @@ function About({ targetRef }: Props) {
                 <Stack h="100%vh">
                   <Paper
                     component="a"
+                    h="140"
+                    w="130"
                     href="https://www.javascript.com/"
                     shadow="lg"
                     radius="xl"
@@ -338,6 +341,8 @@ function About({ targetRef }: Props) {
                   </Paper>
 
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://expo.dev/"
                     shadow="lg"
@@ -359,6 +364,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://www.mongodb.com/"
                     shadow="lg"
@@ -382,6 +389,8 @@ function About({ targetRef }: Props) {
                 </Stack>
                 <Stack h="100%vh">
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://html.com/html5/"
                     shadow="lg"
@@ -403,6 +412,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://www.typescriptlang.org/"
                     shadow="lg"
@@ -424,6 +435,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://mantine.dev/"
                     shadow="lg"
@@ -445,6 +458,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://react.dev/"
                     shadow="lg"
@@ -468,6 +483,8 @@ function About({ targetRef }: Props) {
                 </Stack>
                 <Stack h="100%vh">
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://www.w3.org/Style/CSS/Overview.en.html"
                     shadow="lg"
@@ -489,6 +506,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://github.com/"
                     shadow="lg"
@@ -510,6 +529,8 @@ function About({ targetRef }: Props) {
                     </Stack>
                   </Paper>
                   <Paper
+                    h="140"
+                    w="130"
                     component="a"
                     href="https://nodejs.org/en"
                     shadow="lg"
