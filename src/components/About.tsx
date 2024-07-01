@@ -162,7 +162,7 @@ function About({ targetRef }: Props) {
               h="110"
               w="100"
               component="a"
-              href="https://mantine.dev/"
+              href="https://en.wikipedia.org/wiki/SQL"
               shadow="lg"
               radius="xl"
               withBorder
@@ -171,13 +171,9 @@ function About({ targetRef }: Props) {
               rel="noopener"
             >
               <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Mantine-Icon.png"
-                />
+                <Image w="30" h="15" src="/images/ProgrammingIcons/SQL.png" />
                 <Text c="#005C78" size="xs" fw={500}>
-                  Mantine
+                  SQL
                 </Text>
               </Stack>
             </Paper>
@@ -427,7 +423,7 @@ function About({ targetRef }: Props) {
                   h="140"
                   w="130"
                   component="a"
-                  href="https://mantine.dev/"
+                  href="https://en.wikipedia.org/wiki/SQL"
                   shadow="lg"
                   radius="xl"
                   withBorder
@@ -437,12 +433,12 @@ function About({ targetRef }: Props) {
                 >
                   <Stack justify="center" align="center" gap="xs">
                     <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/Mantine-Icon.png"
+                      w="100"
+                      h="80"
+                      src="/images/ProgrammingIcons/SQL.png"
                     />
                     <Text c="#005C78" size="sm" fw={500}>
-                      Mantine
+                      SQL
                     </Text>
                   </Stack>
                 </Paper>
