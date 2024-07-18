@@ -229,7 +229,7 @@ function About({ targetRef }: Props) {
               h="110"
               w="100"
               component="a"
-              href="https://github.com/"
+              href="aws.amazon.com"
               shadow="lg"
               radius="xl"
               withBorder
@@ -241,10 +241,10 @@ function About({ targetRef }: Props) {
                 <Image
                   w="18"
                   h="5"
-                  src="/images/ProgrammingIcons/Git-Icon.png"
+                  src="/images/ProgrammingIcons/Amazon-Web-Services-AWS-Logo.png"
                 />
                 <Text c="#005C78" size="xs" fw={500}>
-                  GitHub
+                  AWS
                 </Text>
               </Stack>
             </Paper>
@@ -494,7 +494,7 @@ function About({ targetRef }: Props) {
                   h="140"
                   w="130"
                   component="a"
-                  href="https://github.com/"
+                  href="https://aws.amazon.com/"
                   shadow="lg"
                   radius="xl"
                   withBorder
@@ -506,10 +506,10 @@ function About({ targetRef }: Props) {
                     <Image
                       w="50"
                       h="30"
-                      src="/images/ProgrammingIcons/Git-Icon.png"
+                      src="/images/ProgrammingIcons/Amazon-Web-Services-AWS-Logo.png"
                     />
                     <Text c="#005C78" size="sm" fw={500}>
-                      GitHub
+                      AWS
                     </Text>
                   </Stack>
                 </Paper>

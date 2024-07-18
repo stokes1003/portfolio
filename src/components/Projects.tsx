@@ -34,9 +34,10 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             Golf Score Tracker
           </Title>
           <Text c="#006989" size="md">
-            The project was built in React using TypeScript and features
-            components from Mantine and utilizes Netlify's serverless functions
-            to handle authorization and data for the leaderboard table.
+            The project was built in React using TypeScript and features UI
+            components from Mantine. The app utilizes several SQL databases
+            hosted on RDS from AWS to handle relational data and store
+            credentials for authorization.
           </Text>
 
           <Paper p="10px" mb="sm" bg="#005C78">
@@ -187,10 +188,10 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               Golf Score Tracker
             </Title>
             <Text c="#006989">
-              The project was built in React using TypeScript and features
-              components from Mantine and utilizes Netlify's serverless
-              functions to handle authorization and data for the leaderboard
-              table.
+              The project was built in React using TypeScript and features UI
+              components from Mantine. The app utilizes several SQL databases
+              hosted on RDS from AWS to handle relational data and store
+              credentials for authorization.
             </Text>
           </Flex>
 
