@@ -31,13 +31,15 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             Stoopz Golf
           </Title>
           <Title c="#005C78" order={4}>
-            Golf Score Tracker
+            Golf League App
           </Title>
           <Text c="#006989" size="md">
-            The project was built in React using TypeScript and features UI
-            components from Mantine. The app utilizes several SQL databases
-            hosted on RDS from AWS to handle relational data and store
-            credentials for authorization.
+            The stoopz.golf app is a dynamic leaderboard platform that enables
+            friends to track and compare their golf scores in real-time. Built
+            using React Native and TypeScript with the Mantine library, the app
+            features a user-friendly interface and seamless data integration.
+            The app leverages AWS RDS to host a PostgreSQL relational database,
+            ensuring robust and scalable performance.
           </Text>
 
           <Paper p="10px" mb="sm" bg="#005C78">
@@ -185,13 +187,15 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               Stoopz Golf
             </Title>
             <Title c="#005C78" order={4}>
-              Golf Score Tracker
+              Golf League App
             </Title>
             <Text c="#006989">
-              The project was built in React using TypeScript and features UI
-              components from Mantine. The app utilizes several SQL databases
-              hosted on RDS from AWS to handle relational data and store
-              credentials for authorization.
+              The stoopz.golf app is a dynamic leaderboard platform that enables
+              friends to track and compare their golf scores in real-time. Built
+              using React Native and TypeScript with the Mantine library, the
+              app features a user-friendly interface and seamless data
+              integration. The app leverages AWS RDS to host a PostgreSQL
+              relational database, ensuring robust and scalable performance.
             </Text>
           </Flex>
 
