@@ -20,6 +20,65 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
   if (isMobile) {
     return (
       <Container h="100%">
+        <Flex mt="xl" gap="xs" align="center" direction="column">
+          <Title c="#E88D67" order={2}>
+            Turbo Robot
+          </Title>
+          <Title c="#005C78" order={4}>
+            Peer to Peer Chat App
+          </Title>
+
+          <Text c="#006989" size="md">
+            This app was built using React, Next.js, and TypeScript. It uses
+            Tailwind CSS for styling, Clerk for authentication and Supabase
+            database storage. The app allows users to create chat rooms and send
+            messages to one another in real-time.
+          </Text>
+
+          <Paper
+            p="10px"
+            mb="sm"
+            bg="#E88D67"
+            component="a"
+            href="https://chat-app-flax-chi.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            shadow="xl"
+            withBorder
+            w="100%"
+          >
+            <Group align="center" justify="center" gap="xl" grow>
+              <Image radius="sm" src="/images/TurboRobot.png" p="20px" />
+            </Group>
+          </Paper>
+        </Flex>
+        <Group grow justify="flex-start" align="flex-start">
+          <Box size="13rem">
+            <Stack gap="xs">
+              <Button
+                color="#006989"
+                component="a"
+                href="https://chat-app-flax-chi.vercel.app/"
+                variant="outline"
+                target="_blank"
+                rel="noopener"
+              >
+                Live App
+              </Button>
+              <Button
+                color="#006989"
+                variant="filled"
+                component="a"
+                href="https://github.com/stokes1003/chat-app"
+                target="_blank"
+                rel="noopener"
+              >
+                Learn More
+              </Button>
+            </Stack>
+          </Box>
+        </Group>
+
         <Group justify="center">
           <Title c="#005C78" fw="700" size="40">
             Projects
@@ -181,6 +240,63 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
       <Space h="lg" />
 
       <Grid gutter="xl">
+        <Grid.Col mt="xl" mb="xl" span={8}>
+          <Paper
+            shadow="xl"
+            withBorder
+            component="a"
+            href="https://chat-app-flax-chi.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
+            <Paper p="20px" bg="#E88D67">
+              <Image radius="sm" src="/images/TurboRobot.png" p="20px" />
+            </Paper>
+          </Paper>
+        </Grid.Col>
+        <Grid.Col p="lg" mt="80" span={4}>
+          <Flex gap="xs" align="flex-start" direction="column">
+            <Title c="#E88D67" order={2}>
+              TurboRobot Chat App
+            </Title>
+            <Title c="#005C78" order={4}>
+              Peer to Peer Chat App
+            </Title>
+
+            <Text c="#006989">
+              This app was built using React, Next.js, and TypeScript. It uses
+              Tailwind CSS for styling, Clerk for authentication and Supabase
+              database storage. The app allows users to create chat rooms and
+              send messages to one another in real-time.
+            </Text>
+          </Flex>
+
+          <Space h="sm" />
+
+          <Stack align="stretch" justify="flex-start" gap="xs">
+            <Button
+              color="#006989"
+              component="a"
+              href="https://chat-app-flax-chi.vercel.app/"
+              variant="filled"
+              target="_blank"
+              rel="noopener"
+            >
+              Live App
+            </Button>
+            <Button
+              color="#006989"
+              variant="outline"
+              component="a"
+              href="https://github.com/stokes1003/chat-app"
+              target="_blank"
+              rel="noopener"
+            >
+              Learn More
+            </Button>
+          </Stack>
+        </Grid.Col>
+
         <Grid.Col p="lg" mt="80" span={4}>
           <Flex gap="xs" align="flex-start" direction="column">
             <Title c="#E88D67" order={2}>
