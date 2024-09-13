@@ -40,7 +40,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             mb="sm"
             bg="#E88D67"
             component="a"
-            href="https://chat-app-flax-chi.vercel.app/"
+            href="https://www.turborobot.live/chat"
             target="_blank"
             rel="noopener"
             shadow="xl"
@@ -58,7 +58,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               <Button
                 color="#006989"
                 component="a"
-                href="https://chat-app-flax-chi.vercel.app/"
+                href="https://www.turborobot.live/chat"
                 variant="outline"
                 target="_blank"
                 rel="noopener"
@@ -245,7 +245,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             shadow="xl"
             withBorder
             component="a"
-            href="https://chat-app-flax-chi.vercel.app/"
+            href="https://www.turborobot.live/chat"
             target="_blank"
             rel="noopener"
           >
@@ -277,7 +277,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             <Button
               color="#006989"
               component="a"
-              href="https://chat-app-flax-chi.vercel.app/"
+              href="https://www.turborobot.live/chat"
               variant="filled"
               target="_blank"
               rel="noopener"
