@@ -25,14 +25,17 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             Turbo Robot
           </Title>
           <Title c="#005C78" order={4}>
-            Peer to Peer Chat App
+            Peer to Peer Chat App with AI Integration
           </Title>
 
           <Text c="#006989" size="md">
-            This app was built using React, Next.js, and TypeScript. It uses
-            Tailwind CSS for styling, Clerk for authentication and Supabase
-            database storage. The app allows users to create chat rooms and send
-            messages to one another in real-time.
+            This app was built using React, Next.js, and TypeScript, and
+            incorporates Tailwind CSS for styling, Clerk for authentication, and
+            Supabase for database storage. The app allows users to create chat
+            rooms and send messages to one another in real-time. It also
+            integrates ChatGPT via OpenAI's API, enabling conversational AI
+            responses within the chat rooms, adding an interactive and
+            intelligent assistant for users.
           </Text>
 
           <Paper
@@ -260,14 +263,17 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               TurboRobot Chat App
             </Title>
             <Title c="#005C78" order={4}>
-              Peer to Peer Chat App
+              Peer to Peer Chat App with AI Integration
             </Title>
 
             <Text c="#006989">
-              This app was built using React, Next.js, and TypeScript. It uses
-              Tailwind CSS for styling, Clerk for authentication and Supabase
-              database storage. The app allows users to create chat rooms and
-              send messages to one another in real-time.
+              This app was built using React, Next.js, and TypeScript, and
+              incorporates Tailwind CSS for styling, Clerk for authentication,
+              and Supabase for database storage. The app allows users to create
+              chat rooms and send messages to one another in real-time. It also
+              integrates ChatGPT via OpenAI's API, enabling conversational AI
+              responses within the chat rooms, adding an interactive and
+              intelligent assistant for users.
             </Text>
           </Flex>
 
