@@ -22,6 +22,40 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
       <Container h="100%">
         <Flex mt="xl" gap="xs" align="center" direction="column">
           <Title c="#E88D67" order={2}>
+            Buddy
+          </Title>
+          <Title c="#005C78" order={4}>
+            Cannabis Statup App
+          </Title>
+          <Text c="#006989" size="md">
+            Buddy is a soon-to-launch cannabis app. As it has not been released
+            yet, specific details remain confidential. Built with React Native,
+            TypeScript, Supabase, Clerk, and Expo, I developed the majority of
+            the front-end components for this startup app. I also integrated
+            Google Maps and Google Places to enhance location-based features. My
+            work focused on creating a responsive, intuitive interface that
+            brings this vision to life.
+          </Text>
+
+          <Paper
+            p="10px"
+            mb="sm"
+            bg="#005C78"
+            target="_blank"
+            rel="noopener"
+            shadow="xl"
+            withBorder
+          >
+            <Group align="center" justify="center" gap="xl" grow>
+              <Image radius="lg" h="100%" src="/images/Buddy/Home.PNG" />
+              <Image radius="lg" h="100%" src="/images/Buddy/Search.PNG" />
+              <Image radius="lg" h="100%" src="/images/Buddy/Account.PNG" />
+            </Group>
+          </Paper>
+        </Flex>
+
+        <Flex mt="xl" gap="xs" align="center" direction="column">
+          <Title c="#E88D67" order={2}>
             Turbo Robot
           </Title>
           <Title c="#005C78" order={4}>
@@ -185,50 +219,6 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             </Stack>
           </Box>
         </Group>
-
-        <Flex mt="xl" gap="xs" align="center" direction="column">
-          <Title c="#E88D67" order={2}>
-            Map Searcher
-          </Title>
-          <Title c="#005C78" order={4}>
-            Detailed Location Search Engine
-          </Title>
-          <Text c="#006989" size="md">
-            This project was built using React and TypeScript, incorporating the
-            Google Maps API. The app enables users to search for detailed maps
-            of any location around the world.
-          </Text>
-
-          <Paper
-            p="10px"
-            mb="sm"
-            bg="#005C78"
-            component="a"
-            href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
-            target="_blank"
-            rel="noopener"
-            shadow="xl"
-            withBorder
-          >
-            <Image radius="md" src="/images/LocationSearch.png" p="5px" />
-          </Paper>
-        </Flex>
-        <Group grow justify="flex-start" align="flex-start">
-          <Box size="13rem">
-            <Stack gap="xs">
-              <Button
-                color="#006989"
-                variant="filled"
-                component="a"
-                href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
-                target="_blank"
-                rel="noopener"
-              >
-                Learn More
-              </Button>
-            </Stack>
-          </Box>
-        </Group>
       </Container>
     );
   }
@@ -243,6 +233,38 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
       <Space h="lg" />
 
       <Grid gutter="xl">
+        <Grid.Col p="lg" mt="80" span={4}>
+          <Flex gap="xs" align="flex-start" direction="column">
+            <Title c="#E88D67" order={2}>
+              Buddy
+            </Title>
+            <Title c="#005C78" order={4}>
+              Cannabis Statup App
+            </Title>
+            <Text c="#006989">
+              Buddy is a soon-to-launch cannabis app. As it has not been
+              released yet, specific details remain confidential. Built with
+              React Native, TypeScript, Supabase, Clerk, and Expo, I developed
+              the majority of the front-end components for this startup app. I
+              also integrated Google Maps and Google Places to enhance
+              location-based features. My work focused on creating a responsive,
+              intuitive interface that brings this vision to life.
+            </Text>
+          </Flex>
+
+          <Space h="sm" />
+        </Grid.Col>
+        <Grid.Col mt="xl" mb="xl" span={8}>
+          <Paper target="_blank" rel="noopener" shadow="xl" withBorder>
+            <Paper p="20px" bg="#006989">
+              <Group align="center" justify="center" gap="xl" grow>
+                <Image radius="lg" h="100%" src="/images/Buddy/Home.PNG" />
+                <Image radius="lg" h="100%" src="/images/Buddy/Search.PNG" />
+                <Image radius="lg" h="100%" src="/images/Buddy/Account.PNG" />
+              </Group>
+            </Paper>
+          </Paper>
+        </Grid.Col>
         <Grid.Col mt="xl" mb="xl" span={8}>
           <Paper
             shadow="xl"
@@ -429,55 +451,6 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               Learn More
             </Button>
           </Stack>
-        </Grid.Col>
-
-        <Grid.Col p="lg" mt="80" span={4}>
-          <Flex gap="xs" align="flex-start" direction="column">
-            <Title c="#E88D67" order={2}>
-              Map Searcher
-            </Title>
-            <Title c="#005C78" order={4}>
-              Detailed Location Search Engine
-            </Title>
-            <Text c="#006989">
-              This project was built using React and TypeScript, incorporating
-              the Google Maps API. The app enables users to search for detailed
-              maps of any location around the world.
-            </Text>
-          </Flex>
-
-          <Space h="sm" />
-
-          <Group grow justify="flex-start" align="flex-start">
-            <Box size="13rem">
-              <Stack gap="xs">
-                <Button
-                  color="#006989"
-                  variant="outline"
-                  component="a"
-                  href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Learn More
-                </Button>
-              </Stack>
-            </Box>
-          </Group>
-        </Grid.Col>
-        <Grid.Col mt="xl" mb="xl" span={8}>
-          <Paper
-            component="a"
-            href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
-            target="_blank"
-            rel="noopener"
-            shadow="xl"
-            withBorder
-          >
-            <Paper p="20px" bg="#006989">
-              <Image radius="lg" src="/images/LocationSearch.png" p="20px" />
-            </Paper>
-          </Paper>
         </Grid.Col>
       </Grid>
     </Container>
