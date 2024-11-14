@@ -41,7 +41,6 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             p="10px"
             mb="sm"
             bg="#005C78"
-            target="_blank"
             rel="noopener"
             shadow="xl"
             withBorder
@@ -255,7 +254,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
           <Space h="sm" />
         </Grid.Col>
         <Grid.Col mt="xl" mb="xl" span={8}>
-          <Paper target="_blank" rel="noopener" shadow="xl" withBorder>
+          <Paper rel="noopener" shadow="xl" withBorder>
             <Paper p="20px" bg="#006989">
               <Group align="center" justify="center" gap="xl" grow>
                 <Image radius="lg" h="100%" src="/images/Buddy/Home.PNG" />
