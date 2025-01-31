@@ -11,24 +11,29 @@ import {
   Group,
   Box,
   Flex,
-} from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { RefObject } from 'react';
+} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { RefObject } from "react";
 
 function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
-  const isMobile = useMediaQuery('(max-width: 1225px)');
+  const isMobile = useMediaQuery("(max-width: 1225px)");
   if (isMobile) {
     return (
       <Container h="100%">
         <Flex mt="xl" gap="xs" align="center" direction="column">
+          <Group justify="center">
+            <Title c="#005C78" fw="700" size="40">
+              Projects
+            </Title>
+          </Group>
           <Title c="#E88D67" order={2}>
-            Buddy
+            Bud-dy
           </Title>
           <Title c="#005C78" order={4}>
             Cannabis Statup App
           </Title>
           <Text c="#006989" size="md">
-            Buddy is a soon-to-launch cannabis app. As it has not been released
+            Bud-dy is a soon-to-launch cannabis app. As it has not been released
             yet, specific details remain confidential. Built with React Native,
             TypeScript, Supabase, Clerk, and Expo, I developed the majority of
             the front-end components for this startup app. I also integrated
@@ -115,11 +120,6 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
           </Box>
         </Group>
 
-        <Group justify="center">
-          <Title c="#005C78" fw="700" size="40">
-            Projects
-          </Title>
-        </Group>
         <Space h="md" />
         <Flex gap="xs" align="center" direction="column">
           <Title c="#E88D67" order={2}>
@@ -171,16 +171,19 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
 
         <Flex mt="xl" gap="xs" align="center" direction="column">
           <Title c="#E88D67" order={2}>
-            Restaurant Search App
+            Movie Night
           </Title>
           <Title c="#005C78" order={4}>
-            For iOS and Android
+            Helps users pick and rate movies together
           </Title>
 
           <Text c="#006989" size="md">
-            This app was built using React Native with Expo. It utilizes the
-            Yelp API to enable users to easily find restaurants and their
-            ratings across different price ranges.
+            Movie Night makes it easy for friends to choose what to watch by
+            suggesting movies based on shared preferences. Users can create
+            watchlists, rate films, and vote on options in real time. Built with
+            React and TypeScript using Mantine for the UI, the app leverages the
+            TMDB API for movie data and a MongoDB backend powered by Netlify
+            serverless functions.
           </Text>
 
           <Paper
@@ -188,7 +191,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             mb="sm"
             bg="#E88D67"
             component="a"
-            href="https://github.com/stokes1003/Web-Mapping-Platform/tree/main"
+            href="https://booshnight.netlify.app/"
             target="_blank"
             rel="noopener"
             shadow="xl"
@@ -196,9 +199,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             w="100%"
           >
             <Group align="center" justify="center" gap="xl" grow>
-              <Image radius="lg" h="100%" src="/images/FoodApp/FoodApp3.png" />
-              <Image radius="lg" h="100%" src="/images/FoodApp/FoodApp1.png" />
-              <Image radius="lg" h="100%" src="/images/FoodApp/FoodApp2.png" />
+              <Image radius="md" src="/images/booshNight.png" p="5px" />
             </Group>
           </Paper>
         </Flex>
@@ -207,9 +208,19 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             <Stack gap="xs">
               <Button
                 color="#006989"
+                component="a"
+                href="https://booshnight.netlify.app/"
+                variant="outline"
+                target="_blank"
+                rel="noopener"
+              >
+                Live App
+              </Button>
+              <Button
+                color="#006989"
                 variant="filled"
                 component="a"
-                href="https://github.com/stokes1003/food"
+                href="https://github.com/stokes1003/boosh-night"
                 target="_blank"
                 rel="noopener"
               >
@@ -235,13 +246,13 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
         <Grid.Col p="lg" mt="80" span={4}>
           <Flex gap="xs" align="flex-start" direction="column">
             <Title c="#E88D67" order={2}>
-              Buddy
+              Bud-dy
             </Title>
             <Title c="#005C78" order={4}>
               Cannabis Statup App
             </Title>
             <Text c="#006989">
-              Buddy is a soon-to-launch cannabis app. As it has not been
+              Bud-dy is a soon-to-launch cannabis app. As it has not been
               released yet, specific details remain confidential. Built with
               React Native, TypeScript, Supabase, Clerk, and Expo, I developed
               the majority of the front-end components for this startup app. I
@@ -264,37 +275,37 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             </Paper>
           </Paper>
         </Grid.Col>
+
         <Grid.Col mt="xl" mb="xl" span={8}>
           <Paper
             shadow="xl"
             withBorder
             component="a"
-            href="https://www.turborobot.live/chat"
+            href="https://booshnight.netlify.app/"
             target="_blank"
             rel="noopener"
           >
             <Paper p="20px" bg="#E88D67">
-              <Image radius="sm" src="/images/TurboRobot.png" p="20px" />
+              <Image radius="sm" src="/images/booshNight.png" p="20px" />
             </Paper>
           </Paper>
         </Grid.Col>
         <Grid.Col p="lg" mt="80" span={4}>
           <Flex gap="xs" align="flex-start" direction="column">
             <Title c="#E88D67" order={2}>
-              TurboRobot Chat App
+              Movie Night
             </Title>
             <Title c="#005C78" order={4}>
-              Peer to Peer Chat App with AI Integration
+              Helps users pick and rate movies together
             </Title>
 
             <Text c="#006989">
-              This app was built using React, Next.js, and TypeScript, and
-              incorporates Tailwind CSS for styling, Clerk for authentication,
-              and Supabase for database storage. The app allows users to create
-              chat rooms and send messages to one another in real-time. It also
-              integrates ChatGPT via OpenAI's API, enabling conversational AI
-              responses within the chat rooms, adding an interactive and
-              intelligent assistant for users.
+              Movie Night makes it easy for friends to choose what to watch by
+              suggesting movies based on shared preferences. Users can create
+              watchlists, rate films, and vote on options in real time. Built
+              with React and TypeScript using Mantine for the UI, the app
+              leverages the TMDB API for movie data and a MongoDB backend
+              powered by Netlify serverless functions.
             </Text>
           </Flex>
 
@@ -304,7 +315,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             <Button
               color="#006989"
               component="a"
-              href="https://www.turborobot.live/chat"
+              href="https://booshnight.netlify.app/"
               variant="filled"
               target="_blank"
               rel="noopener"
@@ -315,7 +326,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
               color="#006989"
               variant="outline"
               component="a"
-              href="https://github.com/stokes1003/chat-app"
+              href="https://github.com/stokes1003/boosh-night"
               target="_blank"
               rel="noopener"
             >
@@ -392,47 +403,32 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
             shadow="xl"
             withBorder
             component="a"
-            href="https://github.com/stokes1003/food"
+            href="https://www.turborobot.live/chat"
             target="_blank"
             rel="noopener"
           >
             <Paper p="20px" bg="#E88D67">
-              <Group align="center" justify="center" gap="xl" grow>
-                <Image
-                  radius="lg"
-                  h="400"
-                  w="300"
-                  src="/images/FoodApp/FoodApp3.png"
-                />
-                <Image
-                  radius="lg"
-                  h="400"
-                  w="300"
-                  src="/images/FoodApp/FoodApp1.png"
-                />
-                <Image
-                  radius="lg"
-                  h="400"
-                  w="300"
-                  src="/images/FoodApp/FoodApp2.png"
-                />
-              </Group>
+              <Image radius="sm" src="/images/TurboRobot.png" p="20px" />
             </Paper>
           </Paper>
         </Grid.Col>
         <Grid.Col p="lg" mt="80" span={4}>
           <Flex gap="xs" align="flex-start" direction="column">
             <Title c="#E88D67" order={2}>
-              Restaurant Search App
+              TurboRobot Chat App
             </Title>
             <Title c="#005C78" order={4}>
-              For iOS and Android
+              Peer to Peer Chat App with AI Integration
             </Title>
 
             <Text c="#006989">
-              This app was built using React Native with Expo. It utilizes the
-              Yelp API to enable users to easily find restaurants and their
-              ratings across different price ranges.
+              This app was built using React, Next.js, and TypeScript, and
+              incorporates Tailwind CSS for styling, Clerk for authentication,
+              and Supabase for database storage. The app allows users to create
+              chat rooms and send messages to one another in real-time. It also
+              integrates ChatGPT via OpenAI's API, enabling conversational AI
+              responses within the chat rooms, adding an interactive and
+              intelligent assistant for users.
             </Text>
           </Flex>
 
@@ -441,9 +437,19 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
           <Stack align="stretch" justify="flex-start" gap="xs">
             <Button
               color="#006989"
+              component="a"
+              href="https://www.turborobot.live/chat"
+              variant="filled"
+              target="_blank"
+              rel="noopener"
+            >
+              Live App
+            </Button>
+            <Button
+              color="#006989"
               variant="outline"
               component="a"
-              href="https://github.com/stokes1003/food"
+              href="https://github.com/stokes1003/chat-app"
               target="_blank"
               rel="noopener"
             >
