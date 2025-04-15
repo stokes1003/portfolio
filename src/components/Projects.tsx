@@ -110,7 +110,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                         component="a"
                         href={project.liveLink}
                         variant="outline"
-                        w={150}
+                        w={200}
                         target="_blank"
                         rel="noopener"
                       >
@@ -120,7 +120,7 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                         color="#006989"
                         variant="filled"
                         component="a"
-                        w={150}
+                        w={200}
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener"
@@ -139,14 +139,11 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
   }
   return (
     <Container ref={targetRef} h="100%" fluid px="110">
-      <Stack h={100} align="center" justify="center" gap="sm">
+      <Stack h={100} align="center" justify="center">
         <Title c="#005C78" fw="700" size="40">
           Projects
         </Title>
       </Stack>
-
-      <Space h="lg" />
-      <Space h="lg" />
 
       <Grid gutter="xl">
         {projects.map((project, index) => {
@@ -198,56 +195,73 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                     </Grid.Col>
 
                     <Grid.Col span={8} mt="xl" mb="xl">
-                      <Paper shadow="xl" withBorder>
-                        <Paper p="20px" bg="#005C78">
-                          {project.images ? (
-                            <Group
-                              align="center"
-                              justify="center"
-                              gap="xl"
-                              grow
-                            >
-                              {project.images.map((imgSrc, imgIndex) => (
-                                <Image
-                                  key={imgIndex}
-                                  radius="sm"
-                                  h="100%"
-                                  src={imgSrc}
-                                />
-                              ))}
-                            </Group>
-                          ) : (
-                            <Image radius="sm" src={project.images} p="20px" />
-                          )}
-                        </Paper>
+                      <Paper
+                        p="20px"
+                        bg="#005C78"
+                        shadow="xl"
+                        withBorder
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(0.99)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
+                        }}
+                        style={{ cursor: "pointer" }}
+                        component="a"
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {project.images ? (
+                          <Group align="center" justify="center" gap="xl" grow>
+                            {project.images.map((imgSrc, imgIndex) => (
+                              <Image
+                                key={imgIndex}
+                                radius="sm"
+                                h="100%"
+                                src={imgSrc}
+                              />
+                            ))}
+                          </Group>
+                        ) : (
+                          <Image radius="sm" src={project.images} p="20px" />
+                        )}
                       </Paper>
                     </Grid.Col>
                   </>
                 ) : (
                   <>
                     <Grid.Col span={8} mt="xl" mb="xl">
-                      <Paper shadow="xl" withBorder>
-                        <Paper p="20px" bg="#E88D67">
-                          {project.images ? (
-                            <Group
-                              align="center"
-                              justify="center"
-                              gap="xl"
-                              grow
-                            >
-                              {project.images.map((imgSrc, imgIndex) => (
-                                <Image
-                                  key={imgIndex}
-                                  radius="sm"
-                                  h="100%"
-                                  src={imgSrc}
-                                />
-                              ))}
-                            </Group>
-                          ) : (
-                            <Image radius="sm" src={project.images} p="20px" />
-                          )}
-                        </Paper>
+                      <Paper
+                        p="20px"
+                        bg="#E88D67"
+                        withBorder
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(0.99)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
+                        }}
+                        style={{ cursor: "pointer" }}
+                        component="a"
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {project.images ? (
+                          <Group align="center" justify="center" gap="xl" grow>
+                            {project.images.map((imgSrc, imgIndex) => (
+                              <Image
+                                key={imgIndex}
+                                radius="sm"
+                                h="100%"
+                                src={imgSrc}
+                              />
+                            ))}
+                          </Group>
+                        ) : (
+                          <Image radius="sm" src={project.images} p="20px" />
+                        )}
                       </Paper>
                     </Grid.Col>
 

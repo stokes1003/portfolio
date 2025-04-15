@@ -3,20 +3,76 @@ import {
   Title,
   Container,
   Stack,
-  Grid,
   Image,
   Space,
   Group,
-  Paper,
-} from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { TechCard } from "./TechCard";
+
+export const techStackLeft = [
+  {
+    label: "JavaScript",
+    href: "https://www.javascript.com/",
+    src: "/images/ProgrammingIcons/javascript-icon.webp",
+  },
+  {
+    label: "EXPO",
+    href: "https://expo.dev/",
+    src: "/images/ProgrammingIcons/Expo-Logo.webp",
+  },
+  {
+    label: "MongoDB",
+    href: "https://www.mongodb.com/",
+    src: "/images/ProgrammingIcons/MongoDB-Icon.png",
+  },
+];
+const techStackMiddle = [
+  {
+    label: "HTML5",
+    href: "https://html.com/html5/",
+    src: "/images/ProgrammingIcons/HTML5-Icon.png",
+  },
+  {
+    label: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    src: "/images/ProgrammingIcons/TypeScript-Icon.webp",
+  },
+  {
+    label: "SQL",
+    href: "https://en.wikipedia.org/wiki/SQL",
+    src: "/images/ProgrammingIcons/SQL.png",
+  },
+  {
+    label: "REACT",
+    href: "https://react.dev/",
+    src: "/images/ProgrammingIcons/React-icon.png",
+  },
+];
+const techStackRight = [
+  {
+    label: "CSS",
+    href: "https://www.w3.org/Style/CSS/Overview.en.html",
+    src: "/images/ProgrammingIcons/CSS3-icon.png",
+  },
+  {
+    label: "AWS",
+    href: "https://aws.amazon.com/",
+    src: "/images/ProgrammingIcons/Amazon-Web-Services-AWS-Logo.png",
+  },
+  {
+    label: "NODE.JS",
+    href: "https://nodejs.org/en",
+    src: "/images/ProgrammingIcons/nodeJS-icon.png",
+  },
+];
 
 type Props = {
   targetRef: React.RefObject<HTMLDivElement>;
 };
 
 function About({ targetRef }: Props) {
-  const isMobile = useMediaQuery('(max-width: 928px)');
+  const isMobile = useMediaQuery("(max-width: 928px)");
 
   if (isMobile) {
     return (
@@ -28,8 +84,9 @@ function About({ targetRef }: Props) {
         </Stack>
         <Group m="lg" justify="center">
           <Image h="300" w="300" src="/images/AI Headshot.png" />
+
           <Space h="xl" />
-          <Text c="#005C78" size="md">
+          <Text c="#005C78" size="md" w="350">
             I have a passion for building. I love the planning, the problem
             solving, and the learning that comes with taking a project from idea
             to end product. As a software developer, I have utilized React,
@@ -40,237 +97,34 @@ function About({ targetRef }: Props) {
         </Group>
         <Group mt="ls" justify="center">
           <Stack h="50%">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.javascript.com/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/javascript-icon.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  JavaScript
-                </Text>
-              </Stack>
-            </Paper>
-
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://expo.dev/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Expo-Logo.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  EXPO
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.mongodb.com/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/MongoDB-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  MongoDB
-                </Text>
-              </Stack>
-            </Paper>
+            {techStackLeft.map((tech) => (
+              <TechCard
+                key={tech.label}
+                label={tech.label}
+                src={tech.src}
+                href={tech.href}
+              />
+            ))}
           </Stack>
           <Stack h="100%">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://html.com/html5/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/HTML5-Icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  HTML5
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.typescriptlang.org/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/TypeScript-Icon.webp"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  TypeScript
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://en.wikipedia.org/wiki/SQL"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image w="30" h="15" src="/images/ProgrammingIcons/SQL.png" />
-                <Text c="#005C78" size="xs" fw={500}>
-                  SQL
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://react.dev/"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/React-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  REACT
-                </Text>
-              </Stack>
-            </Paper>
+            {techStackMiddle.map((tech) => (
+              <TechCard
+                key={tech.label}
+                label={tech.label}
+                src={tech.src}
+                href={tech.href}
+              />
+            ))}
           </Stack>
           <Stack h="100%">
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="https://www.w3.org/Style/CSS/Overview.en.html"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/CSS3-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  CSS
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              component="a"
-              href="aws.amazon.com"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/Amazon-Web-Services-AWS-Logo.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  AWS
-                </Text>
-              </Stack>
-            </Paper>
-            <Paper
-              h="110"
-              w="100"
-              shadow="lg"
-              radius="xl"
-              withBorder
-              p="xl"
-              component="a"
-              href="https://nodejs.org/en"
-              target="_blank"
-              rel="noopener"
-            >
-              <Stack justify="center" align="center" gap="xs">
-                <Image
-                  w="18"
-                  h="5"
-                  src="/images/ProgrammingIcons/nodeJS-icon.png"
-                />
-                <Text c="#005C78" size="xs" fw={500}>
-                  NODE.JS
-                </Text>
-              </Stack>
-            </Paper>
+            {techStackRight.map((tech) => (
+              <TechCard
+                key={tech.label}
+                label={tech.label}
+                src={tech.src}
+                href={tech.href}
+              />
+            ))}
           </Stack>
         </Group>
       </Container>
@@ -283,263 +137,52 @@ function About({ targetRef }: Props) {
             About
           </Title>
         </Stack>
-        <Grid gutter="xl" h="100%" mt="lg">
-          <Grid.Col h="100%" span={6}>
-            <Group justify="center">
-              <Image h="425" w="425" src="/images/AI Headshot.png" />
-              <Space h="lg" />
-              <Text c="#005C78">
-                I have a passion for building. I love the planning, the problem
-                solving, and the learning that comes with taking a project from
-                idea to end product. As a software developer, I have utilized
-                React, JavaScript and TypeScript as the basic building blocks to
-                create. But the beauty of development is that the learning never
-                stops and new tools are constantly being added.
-              </Text>
-            </Group>
-          </Grid.Col>
-          <Grid.Col span={6} h="100%">
-            <Group justify="center">
-              <Stack h="100%">
-                <Paper
-                  component="a"
-                  h="140"
-                  w="130"
-                  href="https://www.javascript.com/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/javascript-icon.webp"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      JavaScript
-                    </Text>
-                  </Stack>
-                </Paper>
+        <Group gap="lg">
+          <Stack justify="start" w="450" align="center">
+            <Image h="300" w="300" src="/images/AI Headshot.png" />
+            <Text c="#005C78">
+              I have a passion for building. I love the planning, the problem
+              solving, and the learning that comes with taking a project from
+              idea to end product. As a software developer, I have utilized
+              React, JavaScript and TypeScript as the basic building blocks to
+              create. But the beauty of development is that the learning never
+              stops and new tools are constantly being added.
+            </Text>
+          </Stack>
 
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://expo.dev/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/Expo-Logo.webp"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      EXPO
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://www.mongodb.com/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/MongoDB-Icon.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      MongoDB
-                    </Text>
-                  </Stack>
-                </Paper>
-              </Stack>
-              <Stack h="100%">
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://html.com/html5/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/HTML5-Icon.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      HTML5
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://www.typescriptlang.org/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/TypeScript-Icon.webp"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      TypeScript
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://en.wikipedia.org/wiki/SQL"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="100"
-                      h="80"
-                      src="/images/ProgrammingIcons/SQL.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      SQL
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://react.dev/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/React-icon.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      REACT
-                    </Text>
-                  </Stack>
-                </Paper>
-              </Stack>
-              <Stack h="100%">
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://www.w3.org/Style/CSS/Overview.en.html"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/CSS3-icon.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      CSS
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://aws.amazon.com/"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/Amazon-Web-Services-AWS-Logo.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      AWS
-                    </Text>
-                  </Stack>
-                </Paper>
-                <Paper
-                  h="140"
-                  w="130"
-                  component="a"
-                  href="https://nodejs.org/en"
-                  shadow="lg"
-                  radius="xl"
-                  withBorder
-                  p="xl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Stack justify="center" align="center" gap="xs">
-                    <Image
-                      w="50"
-                      h="30"
-                      src="/images/ProgrammingIcons/nodeJS-icon.png"
-                    />
-                    <Text c="#005C78" size="sm" fw={500}>
-                      NODE.JS
-                    </Text>
-                  </Stack>
-                </Paper>
-              </Stack>
-            </Group>
-          </Grid.Col>
-        </Grid>
+          <Group justify="center" w="450">
+            <Stack h="100%">
+              {techStackLeft.map((tech) => (
+                <TechCard
+                  key={tech.label}
+                  label={tech.label}
+                  src={tech.src}
+                  href={tech.href}
+                />
+              ))}
+            </Stack>
+            <Stack h="100%">
+              {techStackMiddle.map((tech) => (
+                <TechCard
+                  key={tech.label}
+                  label={tech.label}
+                  src={tech.src}
+                  href={tech.href}
+                />
+              ))}
+            </Stack>
+            <Stack h="100%">
+              {techStackRight.map((tech) => (
+                <TechCard
+                  key={tech.label}
+                  label={tech.label}
+                  src={tech.src}
+                  href={tech.href}
+                />
+              ))}
+            </Stack>
+          </Group>
+        </Group>
       </Container>
     );
 }
