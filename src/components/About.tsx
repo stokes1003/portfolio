@@ -72,7 +72,7 @@ type Props = {
 };
 
 function About({ targetRef }: Props) {
-  const isMobile = useMediaQuery("(max-width: 928px)");
+  const isMobile = useMediaQuery("(max-width: 660px)");
 
   if (isMobile) {
     return (

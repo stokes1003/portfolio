@@ -7,9 +7,6 @@ import {
   Button,
   Paper,
   Group,
-  Space,
-  Box,
-  Flex,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { RefObject } from "react";
@@ -60,56 +57,55 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
   if (isMobile) {
     return (
       <Container h="100%">
-        <Flex mt="xl" gap="xs" align="center" direction="column">
+        <Stack mt="xl" gap="xs" align="center">
           <Stack h={100} align="center" justify="center" gap="sm">
             <Title c="#005C78" fw="700" size="40">
               Projects
             </Title>
           </Stack>
 
-          <>
-            <Space h="lg" />
-            <Space h="lg" />
-          </>
-
           {projects.map((project, index) => (
-            <Stack key={index} mt="xl" gap="xs" align="center">
-              <Title c="#E88D67" order={2}>
-                {project.title}
-              </Title>
-              <Title c="#005C78" order={4}>
-                {project.subtitle}
-              </Title>
-              <Text c="#006989" size="md">
-                {project.description}
-              </Text>
+            <Stack gap="xl" key={index}>
+              <Paper withBorder shadow="xl" p="lg" radius="md">
+                <Stack gap="lg" px="lg">
+                  <Stack gap="sm" align="center">
+                    <Title c="#E88D67" order={2}>
+                      {project.title}
+                    </Title>
+                    <Title c="#005C78" order={4}>
+                      {project.subtitle}
+                    </Title>
+                    <Text c="#006989">{project.description}</Text>
+                  </Stack>
 
-              <Paper
-                p="10px"
-                mb="sm"
-                bg={index % 2 === 0 ? "#005C78" : "#E88D67"}
-                shadow="xl"
-                withBorder
-                component="a"
-                href={project.liveLink}
-              >
-                <Group align="center" justify="center" gap="xl" grow>
-                  {project.images.map((img, imgIndex) => (
-                    <Image key={imgIndex} radius="sm" h="100%" src={img} />
-                  ))}
-                </Group>
-              </Paper>
+                  <Paper
+                    p="10px"
+                    bg={index % 2 === 0 ? "#005C78" : "#E88D67"}
+                    shadow="xl"
+                    withBorder
+                    component="a"
+                    href={project.liveLink}
+                  >
+                    <Group align="center" justify="center" gap="xl" grow>
+                      {project.images.map((img, imgIndex) => (
+                        <Image
+                          key={imgIndex}
+                          radius="sm"
+                          h="100%"
+                          w="100%"
+                          src={img}
+                        />
+                      ))}
+                    </Group>
+                  </Paper>
 
-              {project.liveLink && project.githubLink && (
-                <Group grow justify="flex-start" align="flex-start">
-                  <Box size="13rem">
-                    <Stack gap="xs">
+                  {project.liveLink && project.githubLink && (
+                    <Stack gap="md" w="100%">
                       <Button
                         color="#006989"
                         component="a"
                         href={project.liveLink}
                         variant="outline"
-                        w={200}
                         target="_blank"
                         rel="noopener"
                       >
@@ -119,7 +115,6 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                         color="#006989"
                         variant="filled"
                         component="a"
-                        w={200}
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener"
@@ -127,12 +122,12 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                         Learn More
                       </Button>
                     </Stack>
-                  </Box>
-                </Group>
-              )}
+                  )}
+                </Stack>
+              </Paper>
             </Stack>
           ))}
-        </Flex>
+        </Stack>
       </Container>
     );
   }
