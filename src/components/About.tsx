@@ -138,7 +138,7 @@ function About({ targetRef }: Props) {
           </Title>
         </Stack>
         <Group gap="lg">
-          <Stack justify="start" w="450" align="center">
+          <Stack justify="start" flex="1" align="center">
             <Image h="300" w="300" src="/images/AI Headshot.png" />
             <Text c="#005C78">
               I have a passion for building. I love the planning, the problem
@@ -150,7 +150,7 @@ function About({ targetRef }: Props) {
             </Text>
           </Stack>
 
-          <Group justify="center" w="450">
+          <Group justify="center" flex="1">
             <Stack h="100%">
               {techStackLeft.map((tech) => (
                 <TechCard

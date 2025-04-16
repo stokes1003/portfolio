@@ -3,12 +3,11 @@ import {
   Container,
   Title,
   Stack,
-  Grid,
   Image,
   Button,
   Paper,
-  Space,
   Group,
+  Space,
   Box,
   Flex,
 } from "@mantine/core";
@@ -31,7 +30,7 @@ const projects = [
     title: "Fairway Fleas Season",
     subtitle: "Golf League App",
     description:
-      "Fairway Fleas is a dynamic leaderboard app designed for golf enthusiasts to track and compare scores with friends throughout the season. Built with React and TypeScript, and powered by MongoDB, the app delivers a seamless user experience with real-time data integration. Its intelligent scoring system automatically calculates and maintains key statistics, tracking both gross and net scoring to provide a comprehensive view of performance over time.",
+      "Fairway Fleas is a dynamic leaderboard app designed for golf enthusiasts to track and compare scores with friends throughout the season. Built with React and TypeScript, and powered by MongoDB, the app delivers a seamless user experience with real-time data integration. The app is designed to be user-friendly and visually appealing, making it a perfect companion for any golf season.",
     images: ["/images/FairwayFleas.png"],
     liveLink: "https://fairwayfleas.netlify.app/",
     githubLink: "https://github.com/stokes1003/golf-season",
@@ -145,19 +144,18 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
         </Title>
       </Stack>
 
-      <Grid gutter="xl">
+      <Stack gap="60px">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
           return (
-            <Grid.Col key={`project-${index}`} span={12}>
-              <Grid align="center">
-                {isEven ? (
-                  <>
-                    <Grid.Col span={4} p="lg">
-                      <Flex
+            <Group key={`project-${index}`}>
+              {isEven ? (
+                <Paper withBorder shadow="xl" p="sm" radius="md">
+                  <Group>
+                    <Stack flex="1" gap="xs">
+                      <Stack
                         gap="xs"
                         align={isEven ? "flex-start" : "flex-end"}
-                        direction="column"
                       >
                         <Title c="#E88D67" order={2}>
                           {project.title}
@@ -166,8 +164,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                           {project.subtitle}
                         </Title>
                         <Text c="#006989">{project.description}</Text>
-                      </Flex>
-                      <Space h="sm" />
+                      </Stack>
+
                       {project.liveLink && project.githubLink && (
                         <Stack align="stretch" justify="flex-start" gap="xs">
                           <Button
@@ -192,11 +190,10 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                           </Button>
                         </Stack>
                       )}
-                    </Grid.Col>
-
-                    <Grid.Col span={8} mt="xl" mb="xl">
+                    </Stack>
+                    <Stack flex="2">
                       <Paper
-                        p="20px"
+                        p="10px"
                         bg="#005C78"
                         shadow="xl"
                         withBorder
@@ -227,87 +224,95 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                           <Image radius="sm" src={project.images} p="20px" />
                         )}
                       </Paper>
-                    </Grid.Col>
-                  </>
-                ) : (
-                  <>
-                    <Grid.Col span={8} mt="xl" mb="xl">
-                      <Paper
-                        p="20px"
-                        bg="#E88D67"
-                        withBorder
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "scale(0.99)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = "scale(1)";
-                        }}
-                        style={{ cursor: "pointer" }}
-                        component="a"
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        {project.images ? (
-                          <Group align="center" justify="center" gap="xl" grow>
-                            {project.images.map((imgSrc, imgIndex) => (
-                              <Image
-                                key={imgIndex}
-                                radius="sm"
-                                h="100%"
-                                src={imgSrc}
-                              />
-                            ))}
-                          </Group>
-                        ) : (
-                          <Image radius="sm" src={project.images} p="20px" />
-                        )}
-                      </Paper>
-                    </Grid.Col>
-
-                    <Grid.Col span={4} p="lg">
-                      <Flex gap="xs" align="flex-start" direction="column">
-                        <Title c="#E88D67" order={2}>
-                          {project.title}
-                        </Title>
-                        <Title c="#005C78" order={4}>
-                          {project.subtitle}
-                        </Title>
-                        <Text c="#006989">{project.description}</Text>
-                      </Flex>
-                      <Space h="sm" />
-                      {project.liveLink && project.githubLink && (
-                        <Stack align="stretch" justify="flex-start" gap="xs">
-                          <Button
-                            color="#006989"
-                            component="a"
-                            href={project.liveLink}
-                            variant="filled"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            Live App
-                          </Button>
-                          <Button
-                            color="#006989"
-                            variant="outline"
-                            component="a"
-                            href={project.githubLink}
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            Learn More
-                          </Button>
+                    </Stack>
+                  </Group>
+                </Paper>
+              ) : (
+                <>
+                  <Paper withBorder shadow="xl" p="sm" radius="md">
+                    <Group>
+                      <Stack flex="2">
+                        <Paper
+                          p="10px"
+                          bg="#E88D67"
+                          withBorder
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.transform = "scale(0.99)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = "scale(1)";
+                          }}
+                          style={{ cursor: "pointer" }}
+                          component="a"
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          {project.images ? (
+                            <Group
+                              align="center"
+                              justify="center"
+                              gap="xl"
+                              grow
+                            >
+                              {project.images.map((imgSrc, imgIndex) => (
+                                <Image
+                                  key={imgIndex}
+                                  radius="sm"
+                                  h="100%"
+                                  src={imgSrc}
+                                />
+                              ))}
+                            </Group>
+                          ) : (
+                            <Image radius="sm" src={project.images} p="20px" />
+                          )}
+                        </Paper>
+                      </Stack>
+                      <Stack flex="1" gap="xs">
+                        <Stack gap="xs" align="flex-start">
+                          <Title c="#E88D67" order={2}>
+                            {project.title}
+                          </Title>
+                          <Title c="#005C78" order={4}>
+                            {project.subtitle}
+                          </Title>
+                          <Text c="#006989">{project.description}</Text>
                         </Stack>
-                      )}
-                    </Grid.Col>
-                  </>
-                )}
-              </Grid>
-            </Grid.Col>
+
+                        {project.liveLink && project.githubLink && (
+                          <Stack align="stretch" justify="flex-start" gap="xs">
+                            <Button
+                              color="#006989"
+                              component="a"
+                              href={project.liveLink}
+                              variant="filled"
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              Live App
+                            </Button>
+                            <Button
+                              color="#006989"
+                              variant="outline"
+                              component="a"
+                              href={project.githubLink}
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              Learn More
+                            </Button>
+                          </Stack>
+                        )}
+                      </Stack>
+                    </Group>
+                  </Paper>
+                </>
+              )}
+            </Group>
           );
         })}
-      </Grid>
+      </Stack>
     </Container>
   );
 }
