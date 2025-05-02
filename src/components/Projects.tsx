@@ -24,6 +24,15 @@ const projects = [
     ],
   },
   {
+    title: "Worker Search",
+    subtitle: "Dashboard for employers to find workers",
+    description:
+      "Worker Search is a React application that helps companies search and manage worker profiles. It features both natural language and structured filtering to find candidates by skills, experience, and availability. Built with TypeScript and Mantine UI, it provides a clean interface with real-time filtering and worker statistics.",
+    images: ["/images/WorkerDashboard.png"],
+    liveLink: "https://worker-dashboard.netlify.app/",
+    githubLink: "https://github.com/stokes1003/worker-dashboard",
+  },
+  {
     title: "Fairway Fleas Season",
     subtitle: "Golf League App",
     description:
@@ -40,15 +49,6 @@ const projects = [
     images: ["/images/booshNight.png"],
     liveLink: "https://booshnight.netlify.app/",
     githubLink: "https://github.com/stokes1003/boosh-night",
-  },
-  {
-    title: "Turbo Robot",
-    subtitle: "Peer to Peer Chat App with AI Integration",
-    description:
-      "This app was built using React, Next.js, and TypeScript, and incorporates Tailwind CSS for styling, Clerk for authentication, and Supabase for database storage. The app allows users to create chat rooms and send messages to one another in real-time. It also integrates ChatGPT via OpenAI's API, enabling conversational AI responses within the chat rooms, adding an interactive and intelligent assistant for users.",
-    images: ["/images/TurboRobot.png"],
-    liveLink: "https://www.turborobot.live/chat",
-    githubLink: "https://github.com/stokes1003/chat-app",
   },
 ];
 
