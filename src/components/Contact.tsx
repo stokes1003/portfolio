@@ -1,15 +1,15 @@
-import { Text, Container, Title, Stack, Group } from '@mantine/core';
-import { useState, useRef } from 'react';
-import { useMediaQuery } from '@mantine/hooks';
-import emailjs from '@emailjs/browser';
-import styles from '../Contact.module.css';
+import { Text, Container, Title, Stack, Group } from "@mantine/core";
+import { useState, useRef } from "react";
+import { useMediaQuery } from "@mantine/hooks";
+import emailjs from "@emailjs/browser";
+import styles from "../Contact.module.css";
 
 type Props = {
   targetRef: React.RefObject<HTMLDivElement>;
 };
 
 function Contact({ targetRef }: Props) {
-  const isMobile = useMediaQuery('(max-width: 1050px)');
+  const isMobile = useMediaQuery("(max-width: 1050px)");
   const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
 
@@ -20,6 +20,23 @@ function Contact({ targetRef }: Props) {
     const templateID = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
+    // Check if environment variables are properly configured
+    if (!serviceID || !templateID || !publicKey) {
+      console.error(
+        "EmailJS configuration missing. Please check your environment variables:"
+      );
+      console.error("VITE_SERVICE_ID:", serviceID ? "✓ Set" : "✗ Missing");
+      console.error("VITE_TEMPLATE_ID:", templateID ? "✓ Set" : "✗ Missing");
+      console.error("VITE_PUBLIC_KEY:", publicKey ? "✓ Set" : "✗ Missing");
+      console.error(
+        "Visit https://dashboard.emailjs.com/admin/account to get your configuration"
+      );
+      alert(
+        "Email service is not properly configured. Please contact the administrator."
+      );
+      return;
+    }
+
     if (form.current) {
       try {
         const result = await emailjs.sendForm(
@@ -28,14 +45,15 @@ function Contact({ targetRef }: Props) {
           form.current,
           publicKey
         );
-        console.log('SUCCESS!', result.text);
+        console.log("SUCCESS!", result.text);
         form.current.reset();
         setIsSent(true);
       } catch (error) {
-        console.error('FAILED...', error);
+        console.error("FAILED...", error);
+        alert("Failed to send message. Please try again later.");
       }
     } else {
-      console.log('form.current is null');
+      console.log("form.current is null");
     }
   };
 
@@ -53,34 +71,34 @@ function Contact({ targetRef }: Props) {
               Have a question or want to work together? Leave your details and
               I'll get back to you as soon as possible.
             </Text>
-            <form ref={form} onSubmit={sendEmail} className={styles['form']}>
-              <label className={styles['label']}>Name</label>
+            <form ref={form} onSubmit={sendEmail} className={styles["form"]}>
+              <label className={styles["label"]}>Name</label>
               <input
                 type="text"
                 name="user_name"
-                className={styles['feedback-input']}
+                className={styles["feedback-input"]}
                 placeholder="Your name"
                 required
               />
-              <label className={styles['label']}>Email</label>
+              <label className={styles["label"]}>Email</label>
               <input
                 type="email"
                 name="user_email"
-                className={styles['feedback-input']}
+                className={styles["feedback-input"]}
                 placeholder="Email"
                 required
               />
-              <label className={styles['label']}>Message</label>
+              <label className={styles["label"]}>Message</label>
               <textarea
                 name="message"
-                className={styles['feedback-input']}
+                className={styles["feedback-input"]}
                 placeholder="Message"
                 required
               />
               <input
                 type="submit"
                 value="Submit"
-                className={styles['submit-button']}
+                className={styles["submit-button"]}
               />
               {isSent && (
                 <Group mt="md" align="center" justify="center">
@@ -108,34 +126,34 @@ function Contact({ targetRef }: Props) {
             Have a question or want to work together? Leave your details and
             I'll get back to you as soon as possible.
           </Text>
-          <form ref={form} onSubmit={sendEmail} className={styles['form']}>
-            <label className={styles['label']}>Name</label>
+          <form ref={form} onSubmit={sendEmail} className={styles["form"]}>
+            <label className={styles["label"]}>Name</label>
             <input
               type="text"
               name="user_name"
-              className={styles['feedback-input']}
+              className={styles["feedback-input"]}
               placeholder="Your name"
               required
             />
-            <label className={styles['label']}>Email</label>
+            <label className={styles["label"]}>Email</label>
             <input
               type="email"
               name="user_email"
-              className={styles['feedback-input']}
+              className={styles["feedback-input"]}
               placeholder="Email"
               required
             />
-            <label className={styles['label']}>Message</label>
+            <label className={styles["label"]}>Message</label>
             <textarea
               name="message"
-              className={styles['feedback-input']}
+              className={styles["feedback-input"]}
               placeholder="Message"
               required
             />
             <input
               type="submit"
               value="Submit"
-              className={styles['submit-button']}
+              className={styles["submit-button"]}
             />
             {isSent && (
               <Group mt="md" align="center" justify="center">

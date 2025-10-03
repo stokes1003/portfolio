@@ -13,6 +13,18 @@ import { RefObject } from "react";
 
 const projects = [
   {
+    title: "Club Season",
+    subtitle: "iOS Golf League App",
+    description:
+      "Club Season is a golf league app that allows users to track and compare scores with friends throughout the season. Built with React Natice, TypeScript, and SupaBase, the app delivers a seamless user experience with real-time data integration. The app is designed to be user-friendly and visually appealing, making it a perfect companion for any golf season.",
+    images: [
+      "/images/ClubSeason/HomeClubSeason.png",
+      "/images/ClubSeason/LeagueStatsClubSeason.png",
+      "/images/ClubSeason/Top3ClubSeason.png",
+    ],
+    liveLink: "https://apps.apple.com/us/app/club-season/id6751780346",
+  },
+  {
     title: "Bud-dy",
     subtitle: "Cannabis Startup App",
     description:
@@ -31,15 +43,6 @@ const projects = [
     images: ["/images/WorkerDashboard.png"],
     liveLink: "https://worker-dashboard.netlify.app/",
     githubLink: "https://github.com/stokes1003/worker-dashboard",
-  },
-  {
-    title: "Fairway Fleas Season",
-    subtitle: "Golf League App",
-    description:
-      "Fairway Fleas is a dynamic leaderboard app designed for golf enthusiasts to track and compare scores with friends throughout the season. Built with React and TypeScript, and powered by MongoDB, the app delivers a seamless user experience with real-time data integration. The app is designed to be user-friendly and visually appealing, making it a perfect companion for any golf season.",
-    images: ["/images/FairwayFleas.png"],
-    liveLink: "https://fairwayfleas.netlify.app/",
-    githubLink: "https://github.com/stokes1003/golf-season",
   },
   {
     title: "Movie Night",
@@ -99,8 +102,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                     </Group>
                   </Paper>
 
-                  {project.liveLink && project.githubLink && (
-                    <Stack gap="md" w="100%">
+                  <Stack gap="md" w="100%">
+                    {project.liveLink && (
                       <Button
                         color="#006989"
                         component="a"
@@ -111,6 +114,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                       >
                         Live App
                       </Button>
+                    )}
+                    {project.githubLink && (
                       <Button
                         color="#006989"
                         variant="filled"
@@ -121,8 +126,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                       >
                         Learn More
                       </Button>
-                    </Stack>
-                  )}
+                    )}
+                  </Stack>
                 </Stack>
               </Paper>
             </Stack>
@@ -161,8 +166,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                         <Text c="#006989">{project.description}</Text>
                       </Stack>
 
-                      {project.liveLink && project.githubLink && (
-                        <Stack align="stretch" justify="flex-start" gap="xs">
+                      <Stack align="stretch" justify="flex-start" gap="xs">
+                        {project.liveLink && (
                           <Button
                             color="#006989"
                             component="a"
@@ -173,6 +178,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                           >
                             Live App
                           </Button>
+                        )}
+                        {project.githubLink && (
                           <Button
                             color="#006989"
                             variant="outline"
@@ -183,8 +190,8 @@ function Projects({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) {
                           >
                             Learn More
                           </Button>
-                        </Stack>
-                      )}
+                        )}
+                      </Stack>
                     </Stack>
                     <Stack flex="2">
                       <Paper
